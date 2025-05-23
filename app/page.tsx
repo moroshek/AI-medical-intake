@@ -1,7 +1,6 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Shield, Lock } from "lucide-react"
+import { Shield, Lock } from "lucide-react"
 
 export default function LandingPage() {
   return (
@@ -39,18 +38,17 @@ export default function LandingPage() {
                 </Badge>
               </div>
               <div className="space-y-4">
-                <Link href="/intake">
-                  <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white">
-                    Start Your Intake
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
                 <p className="text-sm text-gray-500">
-                  Your privacy is important. This is an optional service to expedite your intake.
+                  This is beta software. Do not use this as medical advice. The AI will similute the type of information it can provide to your provider to expedite intake.
                   <Link href="/privacy" className="ml-1 text-teal-600 hover:underline">
                     Learn more
                   </Link>
                 </p>
+                <div className="flex items-center gap-4 text-sm">
+                  <Link href="/intake" className="text-teal-600 hover:underline">
+                    Skip voice, I'd rather chat instead
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden bg-gradient-to-br from-teal-50 to-blue-50">
